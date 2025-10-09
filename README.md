@@ -109,10 +109,10 @@ urlpatterns = [
 ]
 ```
 ## SERVER SIDE PROCESSING:
-![alt text](<abi/myapp/templates/myapp/bmi terminal.png>)
+![alt text](<bmi terminal.png>)
 
 ## HOMEPAGE:
-![alt text](<abi/myapp/templates/myapp/bmi output.png>)
+![alt text](<bmi output.png>)
 
 ## RESULT:
 The program for performing server side processing is completed successfully.
