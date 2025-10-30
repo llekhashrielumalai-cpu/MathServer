@@ -32,8 +32,7 @@ Publish the website in the given URL.
 
 ## PROGRAM :
 ```
-ex5.html
-<html> 
+  <html> 
     <head> 
         <title>BMI Calculation</title> 
         <style>
@@ -49,7 +48,11 @@ ex5.html
              .body{
                     background-color: rgb(35, 67, 33);
             }
+            .name{
+                color:aliceblue;
+                font-style: bold;
 
+            }
         </style>
         <link rel="stylesheet" href="style.css">
     </head> 
@@ -72,47 +75,14 @@ ex5.html
                       </div><br>
                 </form>
                </div>
+               <p class="name" align="center">LEKHASHRI E(25008477)</p>
    </body>
 </html>
-
-views.py
-from django.shortcuts import render 
-def bmi(request): 
-    context={} 
-    context['bmi'] = "0" 
-    context['h'] = "0" 
-    context['w'] = "0" 
-    if request.method == 'POST': 
-        print("POST method is used")
-        h = request.POST.get('height','0')
-        w = request.POST.get('weight','0')
-        bmi=0
-        print('request=',request) 
-        print('height=',h) 
-        print('weight=',w) 
-        bmi = int(w)/((int(h)/100)**2)
-        context['bmi'] = bmi
-        context['h'] = h
-        context['w'] = w
-        print('bmi=',bmi) 
-    return render(request,'myapp/ex5.html',context)
-
-urls.py
-from django.shortcuts import render
-from django.contrib import admin 
-from django.urls import path 
-from myapp import views 
-urlpatterns = [ 
-    path('admin/', admin.site.urls), 
-    path('bmicalculation/',views.bmi,name="bmicalculation"),
-    path('',views.bmi,name="bmicalculationroot")
-]
 ```
 ## SERVER SIDE PROCESSING:
 ![alt text](<bmi terminal.png>)
 
 ## HOMEPAGE:
-![alt text](<bmi output.png>)
-
+ ![alt text](<Screenshot (49).png>)
 ## RESULT:
 The program for performing server side processing is completed successfully.
